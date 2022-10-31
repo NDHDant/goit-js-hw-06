@@ -17,11 +17,9 @@ const galleryList = document.querySelector(`.gallery`);
 
 const imgElement = images
   .map(({ url, alt }) => {
-    return `<li><img src="${url}" alt="${alt}" width="350px></li>`;
-  })
-  .join("");
-
-galleryList.insertAdjacentHTML("beforeend", imgElement);
+	  return `<li><img src='${url}' alt='${alt}' width="350px"></li>`}).join("");
+  
+galleryList.insertAdjacentHTML("beforeEnd", imgElement);
 
 galleryList.style.cssText = `display: flex;
 	gap: 20px;
